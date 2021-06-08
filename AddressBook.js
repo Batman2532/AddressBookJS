@@ -99,3 +99,12 @@ class Contact{
                 +this.email;
     }
 }
+
+let contacts=new Array();
+function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email){
+    let contact=new Contact(firstname,lastname,address,city,state,zip,phoneNumber,email);
+    contacts.push(contact);
+}
+AddContacts('Sau','Char','mbtown','nagpur','MH','440030','456456132','char@gmail.com');
+AddContacts('Sau','Char','kothrud','pune','MH','411041','5566441122','sau@gmail.com');
+console.log(contacts.toString());
