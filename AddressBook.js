@@ -147,3 +147,15 @@ deleteContactByName('Char');
 console.log("Counting The Number of persons in AddressBook");
 let count = contacts.reduce(count => count +=1,0);
 console.log("Number Of persons in adressBook is : " +count);
+
+function SearchCityOrState(cityOrState){
+    if(contacts.filter((p=>p.city==cityOrState)||(p=>p.state==cityOrState))){
+        console.log(contacts.toString());
+    }
+}
+//searching with city
+console.log("searching with city");
+SearchCityOrState('pune');
+//searching with state
+console.log("searching with state");
+SearchCityOrState('MH');
