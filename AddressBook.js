@@ -128,3 +128,14 @@ if(contactindex!=-1){
 }else{
     console.log("conatct not found");
 }
+
+function deleteContactByName(firstname){
+    for(let i =0;i < contacts.length; i++){
+        if(contacts[i].firstname == firstname){
+            contacts.pop(i);
+            console.log(contacts.toString());
+        }
+    }
+}
+console.log("Contact Deleted");
+deleteContactByName('Char');
