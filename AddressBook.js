@@ -102,6 +102,10 @@ class Contact{
 
 let contacts=new Array();
 function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email){
+    if(contacts.some(fname=> fname.firstname == firstname)){
+        console.log("Person is already exists");
+        return;
+    }
     let contact=new Contact(firstname,lastname,address,city,state,zip,phoneNumber,email);
     contacts.push(contact);
 }
